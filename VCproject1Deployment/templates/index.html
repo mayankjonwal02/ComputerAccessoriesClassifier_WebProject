@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B21AI022 PROJECT 1</title>
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename = 'css/style.css')}}"
+    />
+    <script src="{{url_for('static',filename = 'js/script.js')}}"></script>
+  </head>
+  <div class="mainbody">
+    <header>
+      <div class="titlebox">
+        <div class="title">
+          <h1>Computer Accessories Classifier</h1>
+        </div>
+        <div class="inputbutton">
+          <input
+            type="file"
+            id="myinputimage"
+            style="display: none"
+            accept="image/*"
+            onchange="handleFileSelect(event)"
+          />
+          <button
+            onclick="document.getElementById('myinputimage').click()"
+            id="inputimagebutton"
+          >
+            Select Image
+          </button>
+          <!-- <h1 class="url"></h1> -->
+        </div>
+      </div>
+      <div class="titleimage" style="display: flex; flex-direction: row">
+        <img
+          src="{{url_for('static',filename = 'images/pngwing.com (1).png')}}"
+        />
+        <div
+          style="
+            background-color: transparent;
+            position: absolute;
+            transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+          "
+        >
+          <img
+            class="extra"
+            src="{{url_for('static',filename = 'images/pngwing.com (1).png')}}"
+            style="background-color: transparent"
+          />
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div
+        id="preimg"
+        class="preimg"
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          /* margin-left: 5%; */
+        "
+      ></div>
+      <img
+        src=""
+        id="originalimage"
+        style="
+          max-width: 300px;
+          max-height: 300px;
+          display: none;
+          margin-left: 20%;
+          margin-top: 20%;
+          margin-top: 20px;
+        "
+      />
+      <!-- <img src="" id="processedimage" style="max-width: 90%; max-height: 90%" /> -->
+      <button
+        class="processbutton"
+        id="processbutton"
+        onclick="process_image()"
+      >
+        PROCESS
+      </button>
+      <!-- <button class="renderbutton" id="renderbutton" onclick="process_text()">
+        RENDER
+      </button> -->
+    </footer>
+    <div style="margin-top: 20px; color: blueviolet">
+      <h1 class="prediction" id="prediction"></h1>
+    </div>
+  </div>
+  <div class="loading" id="loading">
+    <h1>Loading......</h1>
+  </div>
+</html>
