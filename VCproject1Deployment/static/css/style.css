@@ -1,0 +1,189 @@
+* {
+  background-color: white;
+  margin: 0%;
+  padding: 0%;
+  font-family: sans-serif;
+  height: fit-content;
+  width: fit-content;
+}
+.mainbody {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  position: relative;
+  width: 100%;
+  /* padding-top: 5%; */
+  /* padding-bottom: 3%; */
+  background-color: blueviolet;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+}
+.titlebox {
+  position: relative;
+  margin-top: 3%;
+  left: 10%;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.titlebox .title {
+  position: relative;
+  background-color: inherit;
+  padding-bottom: 10%;
+  left: 10%;
+}
+
+.titlebox .title h1 {
+  color: white;
+  background-color: inherit;
+  font-size: 230%;
+}
+
+.titlebox .inputbutton {
+  position: relative;
+  background-color: inherit;
+  padding-top: 3%;
+  left: 26%;
+}
+
+.titlebox .inputbutton button#inputimagebutton {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  color: blueviolet;
+  border: 3px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: transform 0.2s;
+}
+
+.titlebox .inputbutton button#inputimagebutton:hover {
+  transform: scale(1.2);
+}
+
+.titlebox .inputbutton button#inputimagebutton:active {
+  transform: scale(0.95);
+}
+
+header .titleimage {
+  position: relative;
+  background-color: inherit;
+  margin-left: 40%;
+}
+
+header .titleimage img {
+  position: relative;
+  background-color: transparent;
+  height: 60%;
+  width: 60%;
+  /* transition: transform 0.7s; */
+  animation: rotate 5s linear infinite;
+}
+.extra {
+  position: relative;
+  background-color: transparent;
+  height: 60%;
+  width: 60%;
+  transition: transform 0.7s;
+  /* animation: rotate1 7s linear infinite; */
+}
+
+header .titleimage img:hover {
+  transform: rotate3d(1, 1, 1, 360deg);
+}
+
+/* @keyframes rotate1 {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+  }
+} */
+/* @keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+} */
+
+div footer {
+  display: flex;
+  flex-direction: row;
+}
+
+div footer .processbutton {
+  position: relative;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 15%;
+  margin-left: 30%;
+  display: none;
+  border: 2px solid black;
+  transition: transform 0.2s;
+}
+
+div footer .processbutton:hover {
+  transform: scale(1.2);
+}
+
+div footer .processbutton:active {
+  transform: scale(0.95);
+}
+
+.loading {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  background-color: transparent;
+  display: none;
+  animation: scaleanimation 2s infinite alternate;
+}
+.loading h1 {
+  padding: 10%;
+  background-color: white;
+  color: blueviolet;
+  border-radius: 30px;
+  font-size: 300%;
+  border: 3px solid blueviolet;
+  animation: scaleanimation 0.8s infinite alternate;
+}
+
+@keyframes scaleanimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.preimg {
+  background-color: transparent;
+}
+.preimg img {
+  transition: transform 0.2s;
+  background-color: transparent;
+}
+
+.preimg img:hover {
+  transform: scale(1.2);
+}
+
+.preimg img:active {
+  transform: scale(0.95);
+}
